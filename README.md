@@ -1,4 +1,4 @@
-# talent-flow-demo
+# GBA-talent-flow-map (chinese version)
 This is a demo visualization flow map.
 
 
