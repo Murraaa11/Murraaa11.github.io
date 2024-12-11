@@ -1,0 +1,282 @@
+/*--------Reset--------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*--------Bootstrap--------*/
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.row-label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/*--------Typography--------*/
+:root {
+  font-size: 16px;
+}
+@media (min-width: 576px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #111;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+#banner h1 {
+  font-size: 3.157rem;
+  line-height: 1;
+  color: #111;
+  font-weight: 400;
+}
+
+#banner h1 > div {
+  border-right: 3px solid currentColor;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type 2s steps(11) 1s forwards, blink 0.5s steps(1) infinite;
+}
+
+@keyframes type {
+  to {
+    width: 11.1ch;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+#banner .button {
+  color: #111;
+}
+
+#landing-footer,
+#landing-footer p,
+#landing-footer a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/*--------Banner Section--------*/
+#banner {
+  padding: 12px;
+}
+
+#banner .section-heading:before,
+#banner .section-heading:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-top: 30px;
+}
+
+#banner h1 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#banner-content.row {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#banner a:hover {
+  text-decoration: none;
+}
+
+/*Button*/
+.button {
+  font-size: 1rem;
+  margin: 35px 0;
+  padding: 11px 16px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border-width: 3px;
+  border-style: solid;
+}
+
+/*--------Portfolio Section--------*/
+#portfolio .portfolio-container {
+  padding: 12px;
+}
+
+#portfolio .portfolio-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 62.5%;
+  height: 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio .portfolio-box img {
+  transition: 0.2s;
+}
+
+#portfolio .portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+#portfolio .portfolio-box .portfolio-box-caption {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 16px;
+  color: #fff;
+  background: #000a;
+  backdrop-filter: blur(16px) saturate(120%);
+  transition: 0.2s;
+}
+
+#portfolio .portfolio-box:hover .portfolio-box-caption {
+  bottom: 0;
+}
+
+/*--------Footer--------*/
+footer:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin: 30px auto 25px auto;
+}
+
+/*--------Color--------*/
+#banner .button {
+  border-color: #111;
+}
+
+#banner .button:hover {
+  color: #d2b356;
+  border-color: #d2b356;
+}
+
+a {
+  color: #d2b356;
+}
+
+a:hover {
+  color: #d2b356;
+}
+
+#banner .section-heading:before,
+#banner .section-heading:after,
+footer:before {
+  background: #1492db;
+}
